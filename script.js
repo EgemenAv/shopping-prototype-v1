@@ -19,7 +19,7 @@ const init = () => {
                 <p class="desc">${item.desc}</p>
                 <p class="price">$${item.price}</p>
             </div>
-            <div onclick= "addCart('${item.id}')" class="add">Add to cart</div>
+            <div onclick= "addCart('${item.id}')" class="btn add">Add to cart</div>
         </div>       
         `;
     }).join('');
@@ -31,13 +31,19 @@ const toggleSideview = () => {
 };
 
 
+const clearCart = () => {
+    cart = [];
+
+    updateSideview();
+};
+
 const findItem = (id) => {
     const search = cart.find((item) => {
         return item.id === id;
     });
 
     return search;
-}
+};
 
 const addCart = (id) => {
     const cartItem = findItem(id)
@@ -55,7 +61,7 @@ const subtractCart = (id) => {
     }
     
     updateSideview();
-}
+};
 
 const updateSubtotal = () => {
 
@@ -70,7 +76,7 @@ const updateSubtotal = () => {
     }).reduce((x, y) => x + y, 0); 
 
     totalPrice.innerHTML = total;
-}
+};
 
 const updateSideview = () => {
     
@@ -83,7 +89,7 @@ const updateSideview = () => {
         <div class="item-container">
             <hr>
             <img src="${searchItem.img}" alt="${searchItem.name}">
-            <p class="item-price price">${searchItem.price}</p>
+            <p class="item-price price">${searchItem.price * cartItem.quantity}</p>
             <div class="qua-container">
                 <i onclick= "subtractCart('${searchItem.id}')" class="bi bi-dash-circle decrease"></i>         
                 <div class="quantity">${cartItem.quantity}</div>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Eggmans Shop</title>
+</head>
+<body>
+    <div class="navbar">
+        <header><a href="index.html"><h1>Eggmans Shop</h1></a></header>
+        <div class="cart" onclick="toggleSideview()">
+            <i class="bi bi-cart-fill icon"></i>
+            <div class="item-counter">0</div>
+        </div>
+    </div>
+
+    <div class="checkout">
+        <div class="btn-container">
+            <div class="btn checout">Checkout</div>
+            <div onclick="clearCart()" class="btn clear">Clear Cart</div>
+        </div>
+        <div class="cart-list">
+            <div class="cart-container">
+                <img src="images/img-1.jpg" alt="Hebele">
+                <div class="cart-info">
+                    <h3>Item Name</h3>
+                    <p class="price">10</p>
+                </div>
+                <div class="qua-container">
+                    <i class="bi bi-dash-circle decrease"></i>         
+                    <div class="quantity">0</div>
+                    <i class="bi bi-plus-circle increase"></i>
+                </div>
+                <p class="total">100</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
