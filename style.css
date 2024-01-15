@@ -71,7 +71,7 @@ header{
     flex-direction: column;
     align-items: center;
 
-    transition: all 0.2s;
+    transition: width 0.2s, height 0.2s;
 }
 
 .card:hover{
@@ -104,7 +104,7 @@ header{
     border-radius: 10%;
     font-weight: bold;
 
-    transition: all 0.2s;
+    transition: color 0.2s, background-color 0.2s;
 }
 .add:hover{
     color: white;
@@ -115,9 +115,15 @@ header{
 /* CART SIDEVIEW */
 
 .cart-sideview{
+    visibility: hidden;
     background-color: white;
     width: 0;
     height: 100vh;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     position: fixed;
     top: 0px;
@@ -127,5 +133,44 @@ header{
 }
 
 .cart-display{
-    width: 20rem;
+    visibility: visible;
+    width: 10rem;
+}
+
+.close{
+    position: absolute;
+    left: 0;
+}
+
+.total-price-container{
+    margin-bottom: 1rem;
+}
+
+.to-cart{
+    width: 6rem;
+    padding: 0.4rem;
+    border-radius: 5%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.to-cart:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.item-container img{
+    width: 80%;
+}
+
+.qua-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cart-sideview i:hover{
+    cursor: pointer;
 }

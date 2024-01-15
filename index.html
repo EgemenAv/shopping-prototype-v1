@@ -10,7 +10,7 @@
 <body>
     <div class="navbar">
         <header><h1>Eggmans Shop</h1></header>
-        <div class="cart" onclick="sideview()">
+        <div class="cart" onclick="toggleSideview()">
             <i class="bi bi-cart-fill icon"></i>
             <div class="item-counter">0</div>
         </div>
@@ -20,8 +20,15 @@
     </div>
 
     <div class="cart-sideview">
-        <p class="hello">HELLO WORLD</p>
-        <button onclick="sideview()">Close</button>
+        <i onclick="toggleSideview()" class="bi bi-x-square-fill close"></i>
+        <div class="total-price-container">
+            <p class="subtotal">Subtotal</p>
+            <p class="total-price price">5</p>
+            <div class="to-cart">Go to Cart</div>
+        </div>
+        <div class="item-list">
+
+        </div>
     </div>
 </body>
 <script src="Data.js"></script>
