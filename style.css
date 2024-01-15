@@ -1,0 +1,131 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAVBAR */
+header{
+    color: white;
+    margin-left: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar{
+    padding: 1rem;
+    background-color: hsla(0, 0%, 0%, 0.863);
+    margin-bottom: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* CART */
+.cart{
+    margin-right: 2rem;
+    background-color: white;
+    padding: 0.3rem;
+    border-radius: 10%;
+
+    position: relative;
+    transition: padding 0.2s;
+}
+.cart:hover{
+    padding: 0.4rem;
+    cursor: pointer;
+}
+
+.icon{
+    font-size: 2rem;
+    color: black;
+}
+
+.item-counter{
+    color: white;
+    background-color: red;
+    text-align: center;
+    border-radius: 10%;
+    padding: 0.15rem;
+
+    position: absolute;
+    top: -0.3rem;
+    right: -0.3rem;
+}
+
+/* SHOP LIST */
+.shop{
+    display: flex;
+    flex-wrap: wrap;
+
+    padding-left: 4rem;
+    gap: 5rem;
+}
+
+.card{
+    width: 18rem;
+    height: 27rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5%;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transition: all 0.2s;
+}
+
+.card:hover{
+    width: calc(18rem * 1.03);
+    height: calc(27rem * 1.03);
+}
+
+
+.card img{
+    width: 100%;
+    height: 45%;
+}
+
+.info{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 0.1rem;
+}
+
+.price{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.add{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 100px;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 10%;
+    font-weight: bold;
+
+    transition: all 0.2s;
+}
+.add:hover{
+    color: white;
+    background-color: black;
+    cursor: pointer;
+}
+
+/* CART SIDEVIEW */
+
+.cart-sideview{
+    background-color: white;
+    width: 0;
+    height: 100vh;
+
+    position: fixed;
+    top: 0px;
+    right: 0px;
+
+    transition: width 0.2s;
+}
+
+.cart-display{
+    width: 20rem;
+}
