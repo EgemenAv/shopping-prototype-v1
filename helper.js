@@ -1,13 +1,21 @@
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+const save = () => {
+    localStorage.setItem('cart', JSON.stringify(cart)); 
+}
 
-const findItem = (id) => {
+
+const findCartItem = (id) => {
     const search = cart.find((item) => {
         return item.id === id;
     });
 
     return search;
 };
+
+const findShopItem = (id) => {
+    return shopItemsData.find((item) => item.id === id);
+}
 
 const calculateSubtotal = () => {
 
@@ -27,24 +35,27 @@ const calculateSubtotal = () => {
 const clearCart = (page) => {
     cart = [];
 
+    save();
     update(page);
 };
 
 const addCart = (id, page) => {
-    const cartItem = findItem(id)
+    const cartItem = findCartItem(id)
 
     cartItem ? cartItem.quantity++ : cart.push({id: id, quantity: 1}); 
 
+    save();
     update(page);
 };
 
 const subtractCart = (id, page) => {
-    const cartItem = findItem(id);
+    const cartItem = findCartItem(id);
 
     if (cartItem) {
         cartItem.quantity > 1 ? cartItem.quantity-- : cart = cart.filter((item) => item.id !== cartItem.id);
     }
 
+    save();
     update(page);
 };
 
@@ -55,7 +66,7 @@ const update = (page) => {
             break;
         
         case 'cart':
-
+            updateCart();
             break;
     
         default:

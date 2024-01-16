@@ -1,9 +1,15 @@
+:root{
+    --shadow-style: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    --main-dark: hsla(0, 0%, 0%, 0.8);
+}
+
 body{
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .btn{
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: var(--shadow-style);
     width: 6rem;
     text-align: center;
     padding: 0.5rem;
@@ -15,7 +21,7 @@ body{
 }
 .btn:hover{
     color: white;
-    background-color: hsla(0, 0%, 0%, 0.822);
+    background-color: var(--main-dark) ;
     cursor: pointer;
 }
 
@@ -29,13 +35,13 @@ header{
     margin-left: 2rem;
     font-family: Arial, Helvetica, sans-serif;
 }
-header:hover{
+header h1:hover{
     cursor: pointer;
 }
 
 .navbar{
     padding: 1rem;
-    background-color: hsla(0, 0%, 0%, 0.863);
+    background-color: var(--main-dark);
     margin-bottom: 2rem;
 
     display: flex;
@@ -87,7 +93,7 @@ header:hover{
 .card{
     width: 18rem;
     height: 27rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: var(--shadow-style);
     border-radius: 5%;
     overflow: hidden;
 
@@ -95,12 +101,11 @@ header:hover{
     flex-direction: column;
     align-items: center;
 
-    transition: width 0.2s, height 0.2s;
+    transition: transform 0.2s;
 }
 
 .card:hover{
-    width: calc(18rem * 1.03);
-    height: calc(27rem * 1.03);
+    transform: scale(1.05);
 }
 
 
@@ -119,6 +124,11 @@ header:hover{
     text-align: center;
     font-weight: bold;
     font-size: 1.2rem;
+}
+.price:before{
+    content: '$';
+    font-size: 0.7em;
+    vertical-align: top;
 }
 
 /* CART SIDEVIEW */
@@ -180,7 +190,7 @@ header:hover{
     align-items: center;
 }
 
-.cart-sideview i:hover{
+i:hover{
     cursor: pointer;
 }
 
@@ -207,7 +217,7 @@ header:hover{
 .cart-container{
     width: 36rem;
     height: 12rem;
-    border: 2px solid black;
+    box-shadow: var(--shadow-style);
     margin-top: 2rem;
 
     display: grid;
@@ -234,10 +244,31 @@ header:hover{
 
 .cart-container .qua-container{
     grid-area: c;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .total{
     grid-area: d;
     text-align: center;
+}
+
+
+.cart-container .quantity{
+    margin: 1rem;
+}
+
+.slide--faze-in{
+    animation: slide 1s, faze-in 1s;
+}
+
+@keyframes faze-in{
+    0%{
+        opacity: 0;
+    }
+}
+
+@keyframes slide{
+    0%{
+        transform: translateX(-6rem);
+    }
 }

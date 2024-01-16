@@ -14,26 +14,20 @@
 
     <div class="checkout">
         <div class="btn-container">
-            <div class="btn checout">Checkout</div>
-            <div onclick="clearCart()" class="btn clear">Clear Cart</div>
+            <div class="btn btn-checkout">Checkout</div>
+            <div onclick="clearCart('cart')" class="btn clear">Clear Cart</div>
         </div>
         <div class="cart-list">
-            <div class="cart-container">
-                <img src="images/img-1.jpg" alt="Hebele">
-                <div class="cart-info">
-                    <h3>Item Name</h3>
-                    <p class="price">10</p>
-                </div>
-                <div class="qua-container">
-                    <i class="bi bi-dash-circle decrease"></i>         
-                    <div class="quantity">0</div>
-                    <i class="bi bi-plus-circle increase"></i>
-                </div>
-                <p class="total">100</p>
-            </div>
+
+        </div>
+        <hr>
+        <div class="sub-total-container">
+            <p>Subtotal Price: </p>
+            <p class="sub-total price">0</p>
         </div>
     </div>
 </body>
 <script src="Data.js"></script>
+<script src="helper.js"></script>
 <script src="cart.js"></script>
 </html>
