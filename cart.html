@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Eggmans Shop</title>
 </head>
@@ -14,20 +14,21 @@
 
     <div class="checkout">
         <div class="btn-container">
-            <div class="btn btn-checkout">Checkout</div>
+            <div onclick="checkout()" class="btn btn-checkout">Checkout</div>
             <div onclick="clearCart('cart')" class="btn clear">Clear Cart</div>
         </div>
         <div class="cart-list">
 
         </div>
-        <hr>
         <div class="sub-total-container">
+            <br>
+            <hr>
             <p>Subtotal Price: </p>
             <p class="sub-total price">0</p>
         </div>
     </div>
 </body>
-<script src="Data.js"></script>
-<script src="helper.js"></script>
-<script src="cart.js"></script>
+<script src="src/Data.js"></script>
+<script src="src/helper.js"></script>
+<script src="src/cart.js"></script>
 </html>

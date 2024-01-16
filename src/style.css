@@ -219,6 +219,8 @@ i:hover{
     height: 12rem;
     box-shadow: var(--shadow-style);
     margin-top: 2rem;
+    border-radius: 2%;
+    overflow: hidden;
 
     display: grid;
     grid-template-columns: 0.6fr 1fr;
@@ -228,6 +230,11 @@ i:hover{
                         "a d";
 
     column-gap: 1rem;
+    transition: transform 0.2s;
+}
+
+.cart-container:hover{
+    transform: scale(1.05);
 }
 
 .cart-container img{

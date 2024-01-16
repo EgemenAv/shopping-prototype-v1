@@ -29,4 +29,8 @@ const updateCart = () => {
     animationPlayed = true;
 };
 
+const checkout = () => {
+    alert('Thank you for checking out the demo!!');
+};
+
 updateCart();
