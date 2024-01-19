@@ -57,10 +57,10 @@ header h1:hover{
     border-radius: 10%;
 
     position: relative;
-    transition: padding 0.2s;
+    transition: scale 0.2s;
 }
 .cart:hover{
-    padding: 0.4rem;
+    scale: 1.10;
     cursor: pointer;
 }
 
